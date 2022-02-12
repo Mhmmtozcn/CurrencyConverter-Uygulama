@@ -138,8 +138,8 @@
                 <div class="converter">
                     <h3 class="converter__title">Döviz Çevir</h3>
                     <div class="converter__amount">
-                        <input type="text" value="1">
-                        <select>
+                        <input class="converter__amount-input" type="number" value="1">
+                        <select class="converter__amount-select">
                             <option>USD</option>
                             <option>GBP</option>
                             <option>DKK</option>
@@ -149,10 +149,10 @@
                         </select>
                     </div>
                     <div class="converter__image">
-                        <img src="_assets/img/button-change.svg" alt="">
+                        <img class="converter__image-changeButton" src="_assets/img/button-change.svg" alt="">
                     </div>
                     <div class="converter__result">
-                        <div>13.5222</div>
+                        <div class="converter__result-result"></div>
                         <span>TL</span>
                     </div>
                 </div>
@@ -168,6 +168,7 @@
             </button>
         </div>
     </div>
+    <script src="_assets/js/currency.js"></script>
     <script src="_assets/js/app.js"></script>
 </body>
 
