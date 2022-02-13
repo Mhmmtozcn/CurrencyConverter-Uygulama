@@ -17,11 +17,11 @@ body {
 }
 
 .main-container {
-    padding: 9px 1rem 34px 1rem;
+    padding: 9px 16px 34px;
     max-width: 1440px;
 
     @media (min-width: 768px) {
-        padding: 31px 5rem 79px 5rem;
+        padding: 31px 80px 79px;
     }
 
     @media (min-width: 992px) {

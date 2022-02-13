@@ -3,7 +3,8 @@ class Currency {
     constructor(firtsCurrency) {
         this.firtsCurrency = firtsCurrency;
         this.changeUrl = "https://api.exchangerate.host/latest?base=";
-        this.amounts = null;
+        this.getUrl = "https://api.exchangerate.host/latest?base=TRY";
+        this.amount = 1;
     }
     exchange() {
         return new Promise((resolve, reject) => {
@@ -23,5 +24,15 @@ class Currency {
     }
     changeFirstCurrency(newFirstCurrency) {
         this.firtsCurrency = newFirstCurrency;
+    }
+    getRate() {
+        return new Promise((resolve, reject) => {
+            fetch(this.getUrl)
+                .then(response => response.json())
+                .then(response => {
+                    resolve(response.rates);
+                })
+                .catch(err => reject(err));
+        });
     }
 }
